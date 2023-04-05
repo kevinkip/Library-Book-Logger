@@ -1,0 +1,16 @@
+body{
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    flex-flow: column;
+}
+
+.header{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
