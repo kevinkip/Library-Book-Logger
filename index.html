@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script defer src="script.js"></script>
     <link rel="stylesheet" href="styles.css">
     <title>Library Book Logger</title>
 </head>
@@ -15,23 +14,31 @@
             <div class="login"><button>Login</button></div>
         </div>
         <div class="body">
+            <div class="newBookBtn">
+                <button class="newBook">New Book</button>
+            </div>
             <div id="bookList" class="bookList">
 
             </div>
             <div class="addForm">
-                <button id="addBook">New Book</button>
                 <div id="bookForm" class="modal">
                     <form action="" class="addBookForm">
+                        <span class="close">&times;</span>
                         <h3>Add a new Book</h3>
                         <input class="input" type="text" placeholder="Title" required maxlength="250">
                         <input class="input" type="text" placeholder="Author" required maxlength="250">
                         <input class="input" type="number" placeholder="Number of Pages" required maxlength="10000">
-                        <input type="checkbox" id="readBook" name="readBook">
-                        <label for="readBook">Have you read this book?</label>
+                        <div class="checkMark">
+                            <label for="readBook">Have you read this book?</label>
+                            <input type="checkbox" id="readBook" name="readBook">
+                        </div>
+                        <button class="submit">Submit</button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
 </body>
+<script defer src="script.js"></script>
+
 </html>
