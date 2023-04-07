@@ -10,7 +10,7 @@
 <body>
     <div class="container">
         <div class="header">
-            <div class="logo">Logo</div>
+            <div class="logo"><img class="logo-pic" src="./images/ishaq-robin-caND1D-Kh9Y-unsplash.jpg" alt=""></div>
             <div class="login"><button>Login</button></div>
         </div>
         <div class="body">
@@ -21,20 +21,18 @@
 
             </div>
             <div class="addForm">
-                <div id="bookForm" class="modal">
-                    <form action="" class="addBookForm">
-                        <span class="close">&times;</span>
-                        <h3>Add a new Book</h3>
-                        <input class="input" type="text" placeholder="Title" required maxlength="250">
-                        <input class="input" type="text" placeholder="Author" required maxlength="250">
-                        <input class="input" type="number" placeholder="Number of Pages" required maxlength="10000">
-                        <div class="checkMark">
-                            <label for="readBook">Have you read this book?</label>
-                            <input type="checkbox" id="readBook" name="readBook">
-                        </div>
-                        <button class="submit">Submit</button>
-                    </form>
-                </div>
+                <form action="" class="addBookForm">
+                    <div class="close"><img class="close-btn" src="./images/close.png" alt=""></div>
+                    <h3>Add a new Book</h3>
+                    <input class="input" type="text" placeholder="Title" required maxlength="250">
+                    <input class="input" type="text" placeholder="Author" required maxlength="250">
+                    <input class="input" type="number" placeholder="Number of Pages" required maxlength="10000">
+                    <div class="checkMark">
+                        <label for="readBook">Have you read this book?</label>
+                        <input type="checkbox" id="readBook" name="readBook">
+                    </div>
+                    <button class="submit">Submit</button>
+                </form>
             </div>
         </div>
     </div>

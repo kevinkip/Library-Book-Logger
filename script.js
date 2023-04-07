@@ -17,6 +17,10 @@ window.addEventListener("click", (e)=> {
     }
 })
 
+document.querySelector(".submit").addEventListener("click", (event)=> {
+    event.preventDefault()
+  });
+
 let bookList = [
     {
         title: 'How I met your mother',

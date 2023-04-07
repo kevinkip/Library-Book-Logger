@@ -21,6 +21,33 @@ body{
     align-items: center;
 }
 
+.logo{
+    display: flex;
+    height: 70px;
+}
+
+.logo-pic{
+    max-width: auto;
+}
+
+.close{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.close-btn{
+    display: flex;
+    width: 30px;
+    padding-right: 5px;
+}
+
+.login button{
+    padding: 8px 16px;
+    margin: 4px 2px;
+    text-decoration: none; 
+}
+
 .addForm{
     display: none; /* hidden by default */
     position: fixed; /* Stay in place */
@@ -38,15 +65,13 @@ body{
     display: flex;
     flex-flow: column;
     width: 30%;
-    padding: 20px;
+    padding: 15px;
     margin: 15% auto;
     border: 2px solid #888;
-    border-radius: 5px;
+    border-radius: 10px;
     gap: 10px;
     background-color: white;
 }
-
-
 
 h3{
     display: flex;
@@ -75,21 +100,24 @@ input{
     margin: 4px 2px;
 }
 
-.close{
+.close-btn{
     display: flex;
     flex-direction: row;
     justify-content: end;
     color: #000000;
     float: right;
-    font-size: 30px;
+    font-size: 19px;
 }
 
-.close:hover,
-.close:focus{
+.close-btn:hover,
+.close-btn:focus,
+.login button:hover,
+.newBook:hover{
     cursor: pointer;
     text-decoration: none;
     color: black;
 }
+
 
 #readBook:hover,
 #readBook:focus{
