@@ -20,8 +20,16 @@ body{
 
 .body{
     display: flex;
+    flex-flow: column;
     justify-content: center;
     padding: 5px;
+}
+
+.bookList{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
 }
 
 .newBookBtn{

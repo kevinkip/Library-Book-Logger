@@ -36,9 +36,29 @@ let bookList = [
     }
 ];
 
-// for (i in bookList){
-//     list.appendChild(bookList[i])
-// }
+class Book {
+    constructor(
+        title = '',
+        author = '',
+        pages = '0',
+        read = false
+    ){
+        this.title = title
+        this.author = author
+        this.pages = pages
+        this.read = read
+    }
+}
+
+class Library {
+    constructor(){
+        this.books = []        
+    }
+
+    
+}
+
+const library = new Library();
 
 function Book(title, author, pages, read){
     this.title = title
@@ -51,6 +71,8 @@ function Book(title, author, pages, read){
 }
 
 function addBookToLibrary(){
-    
+    for (i in bookList){
+    list.appendChild(bookList[i])
+}
 }
 
