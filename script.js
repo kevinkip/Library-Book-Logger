@@ -55,7 +55,6 @@ class Library {
         this.books = []        
     }
 
-    
 }
 
 const library = new Library();
@@ -76,3 +75,9 @@ function addBookToLibrary(){
 }
 }
 
+// Local Storage
+//Thank you MDN window.localStorage docs 
+
+const localStorage = () =>{
+    localStorage.setItem('library', JSON.stringify(library.books));
+}
