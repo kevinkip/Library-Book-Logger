@@ -24,12 +24,12 @@
                 <form action="" class="addBookForm">
                     <div class="close"><img class="close-btn" src="./images/close.png" alt=""></div>
                     <h3>Add a new Book</h3>
-                    <input class="input" type="text" placeholder="Title" required maxlength="250">
-                    <input class="input" type="text" placeholder="Author" required maxlength="250">
-                    <input class="input" type="number" placeholder="Number of Pages" required maxlength="10000">
+                    <input class="input" id="title" type="text" placeholder="Title" required maxlength="250">
+                    <input class="input" id="author" type="text" placeholder="Author" required maxlength="250">
+                    <input class="input" id="pages" type="number" placeholder="Number of Pages" required maxlength="10000">
                     <div class="checkMark">
-                        <label for="readBook">Have you read this book?</label>
-                        <input type="checkbox" id="readBook" name="readBook">
+                        <label id="readCheck" for="readBook">Have you read this book?</label>
+                        <input id="" type="checkbox" id="readBook" name="readBook">
                     </div>
                     <button class="submit">Submit</button>
                 </form>

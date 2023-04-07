@@ -39,9 +39,12 @@ class Library {
         this.books = []        
     }
 
+    addBook(newBook){
+        this.books.push(newBook)
+    }
 }
 
-function addBookToLibrary(){
+const addBookToLibrary = () =>{
     for (i in list.books){
         newBookCard(i);
     }
@@ -82,26 +85,42 @@ const newBookCard = (book) => {
 
 const library = new Library();
 
+const getBookInfo = () => {
+    const title = document.querySelector("#title").value;
+    const author = document.querySelector("#author").value;
+    const pages = document.querySelector("#pages").value;
+    const read = document.querySelector("#readCheck").checked;
+    return new Book(title, author, pages, read)
+}
+
+const addBookInfo = (e) => {
+    e.preventDefault()
+    const newBook = getBookInfo()
+
+    library.addBook(newBook);
+}
+
 btn.addEventListener("click", () => {
     form.style.display = "block"; 
  })
  
- span.addEventListener("click", () => {
+span.addEventListener("click", () => {
      form.style.display = "none";
  })
  
- window.addEventListener("click", (e)=> {
+window.addEventListener("click", (e)=> {
      if(e.target == form){ /* if user clicks anywhere outside of form, close it*/
          inputForm.reset()
          form.style.display = "none"
      }
  })
  
- document.querySelector(".submit").addEventListener("click", (event)=> {
-     event.preventDefault()
+document.querySelector(".submit").addEventListener("click", (event)=> {
+    event.preventDefault()
+    addBookInfo;
    });
 
-
+inputForm.onsubmit = addBookInfo;
 
 // Local Storage
 //Thank you MDN window.localStorage docs 
