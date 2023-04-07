@@ -41,7 +41,13 @@ class Library {
 
 }
 
-const newBookCard = () => {
+function addBookToLibrary(){
+    for (i in list.books){
+        newBookCard(i);
+    }
+}
+
+const newBookCard = (book) => {
     const bookCard = document.createElement('div');
     const title = document.createElement('p');
     const author = document.createElement('p');
@@ -49,6 +55,29 @@ const newBookCard = () => {
     const btnSection = document.createElement('div');
     const readBtn = document.createElement('button');
     const removeBtn = document.createElement('button');
+
+    bookCard.classList.add('book-card');
+    
+    title.textContent = `"${book.title}"`;
+    author.textContent = book.author;
+    pages.textContent = `${book.pages} pages`;
+    removeBtn.textContent = 'Remove'
+
+    if (book.read){
+        readBtn.textContent = 'Read'
+        readBtn.classList.add('btn-light-green')
+    } else {
+        readBtn.textContent = 'Not read'
+        readBtn.classList.add('btn-light-red')
+    }
+
+    bookCard.appendChild(title);
+    bookCard.appendChild(author);
+    bookCard.appendChild(pages);
+    btnSection.appendChild(readBtn);
+    btnSection.appendChild(removeBtn);
+    bookCard.appendChild(btnSection)
+    list.appendChild(bookCard);
 }
 
 const library = new Library();
@@ -72,11 +101,7 @@ btn.addEventListener("click", () => {
      event.preventDefault()
    });
 
-function addBookToLibrary(){
-    for (i in bookList){
-    list.appendChild(bookList[i])
-}
-}
+
 
 // Local Storage
 //Thank you MDN window.localStorage docs 
