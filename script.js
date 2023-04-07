@@ -2,6 +2,7 @@ const list = document.getElementById('bookList');
 const btn = document.querySelector(".newBook");
 const span = document.querySelector(".close");
 const form = document.querySelector(".addForm");
+const inputForm = document.querySelector(".addBookForm");
 
 btn.addEventListener("click", () => {
    form.style.display = "block"; 
@@ -13,6 +14,7 @@ span.addEventListener("click", () => {
 
 window.addEventListener("click", (e)=> {
     if(e.target == form){ /* if user clicks anywhere outside of form, close it*/
+        inputForm.reset()
         form.style.display = "none"
     }
 })
@@ -58,16 +60,6 @@ class Library {
 }
 
 const library = new Library();
-
-function Book(title, author, pages, read){
-    this.title = title
-    this.author = author
-    this.pages = pages
-    this.read = read
-    this.info = function(){
-        return ('The ' + this.title + ' by ' + this.author + ', ' + this.pages + ' pages, not read yet');
-    }
-}
 
 function addBookToLibrary(){
     for (i in bookList){
